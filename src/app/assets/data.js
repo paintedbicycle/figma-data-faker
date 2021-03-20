@@ -262,6 +262,15 @@ const data = {
           return faker.commerce.product();
         },
       },
+      {
+        name: "Product Description",
+        identifier: "commerce.productDescription",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.commerce.productDescription();
+        },
+      },
     ],
   },
   company: {
@@ -412,33 +421,42 @@ const data = {
   date: {
     name: "Dates",
     data: [
-      // {
-      //   name: "Past Date (Full)",
-      //   identifier: "date.past",
-      //   handler: "setLayerNameAndData",
-      //   script: "index.js",
-      //   replace: function () {
-      //     return faker.date.past();
-      //   },
-      // },
-      // {
-      //   name: "Future Date (Full)",
-      //   identifier: "date.future",
-      //   handler: "setLayerNameAndData",
-      //   script: "index.js",
-      //   replace: function () {
-      //     return faker.date.future();
-      //   },
-      // },
-      // {
-      //   name: "Recent Date (Full)",
-      //   identifier: "date.recent",
-      //   handler: "setLayerNameAndData",
-      //   script: "index.js",
-      //   replace: function () {
-      //     return faker.date.recent();
-      //   },
-      // },
+      {
+        name: "Soon Date (Full)",
+        identifier: "date.soon",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.date.soon().toDateString();
+        },
+      },
+      {
+        name: "Past Date (Full)",
+        identifier: "date.past",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.date.past().toDateString();
+        },
+      },
+      {
+        name: "Future Date (Full)",
+        identifier: "date.future",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.date.future().toDateString();
+        },
+      },
+      {
+        name: "Recent Date (Full)",
+        identifier: "date.recent",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.date.recent().toDateString();
+        },
+      },
       {
         name: "Month",
         identifier: "date.month",
@@ -481,14 +499,32 @@ const data = {
         },
       },
       {
-        name: "Credit Card Last 4",
+        name: "Credit Card Number",
         identifier: "finance.mask",
         handler: "setLayerNameAndData",
         script: "index.js",
         replace: function () {
-          return faker.finance.mask();
+          return faker.finance.creditCardNumber();
         },
       },
+      {
+        name: "Credit Card CVV",
+        identifier: "finance.creditCardCVV",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.finance.creditCardCVV();
+        },
+      },
+      // {
+      //   name: "Credit Card Last 4",
+      //   identifier: "finance.mask",
+      //   handler: "setLayerNameAndData",
+      //   script: "index.js",
+      //   replace: function () {
+      //     return faker.finance.mask();
+      //   },
+      // },
       {
         name: "Purchase Amount / Price",
         identifier: "finance.amount",
@@ -544,6 +580,24 @@ const data = {
         },
       },
       {
+        name: "Litecoin Address",
+        identifier: "finance.litecoinAddress",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.finance.litecoinAddress();
+        },
+      },
+      {
+        name: "Ethereum Address",
+        identifier: "finance.ethereumAddress",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.finance.ethereumAddress();
+        },
+      },
+      {
         name: "IBAN Number",
         identifier: "finance.iban",
         handler: "setLayerNameAndData",
@@ -562,6 +616,57 @@ const data = {
         },
       },
     ],
+  },
+
+  git: {
+    name: "Git",
+    data: [
+      {
+        name: "Git Branch Name",
+        identifier: "git.branch",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.git.branch();
+        },
+      },
+      {
+        name: "Git Commit Entry",
+        identifier: "git.commitEntry",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.git.commitEntry();
+        },
+      },
+      {
+        name: "Git Commit Message",
+        identifier: "git.commitMessage",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.git.commitMessage();
+        },
+      },
+      {
+        name: "Git Commit SHA",
+        identifier: "git.commitSha",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.git.commitSha();
+        },
+      },
+      {
+        name: "Git Short SHA",
+        identifier: "git.shortSha",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.git.shortSha();
+        },
+      },
+    ]
   },
 
   hacker: {
@@ -718,6 +823,15 @@ const data = {
         },
       },
       {
+        name: "Port number",
+        identifier: "internet.port",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.internet.port().toString();
+        },
+      },
+      {
         name: "User Agent String",
         identifier: "internet.userAgent",
         handler: "setLayerNameAndData",
@@ -842,7 +956,20 @@ const data = {
       },
     ],
   },
-
+  music: {
+    name: "Music",
+    data: [
+      {
+        name: "Genre",
+        identifier: "music.genre",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.music.genre();
+        },
+      },
+    ]
+  },
   name: {
     name: "Person",
     data: [
@@ -862,6 +989,15 @@ const data = {
         script: "index.js",
         replace: function () {
           return faker.name.lastName();
+        },
+      },
+      {
+        name: "Middle Name",
+        identifier: "name.middleName",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.name.middleName();
         },
       },
       {
@@ -981,7 +1117,43 @@ const data = {
         handler: "setLayerNameAndData",
         script: "index.js",
         replace: function () {
-          return faker.random.number();
+          return faker.random.number().toString();
+        },
+      },
+      {
+        name: "Float",
+        identifier: "random.number",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.random.float().toString();
+        },
+      },
+      {
+        name: "Array Element",
+        identifier: "random.arrayElement",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.random.arrayElement().toString();
+        },
+      },
+      {
+        name: "arrayElements",
+        identifier: "random.arrayElements",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.random.arrayElements().toString();
+        },
+      },
+      {
+        name: "objectElement",
+        identifier: "random.objectElement",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.random.objectElement().toString();
         },
       },
       {
@@ -999,7 +1171,7 @@ const data = {
         handler: "setLayerNameAndData",
         script: "index.js",
         replace: function () {
-          return faker.random.boolean();
+          return faker.random.boolean().toString();
         },
       },
       {
@@ -1030,6 +1202,15 @@ const data = {
         },
       },
       {
+        name: "Random Aalpha Character",
+        identifier: "random.alpha",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.random.alpha();
+        },
+      },
+      {
         name: "Random AlphaNum Character",
         identifier: "random.alphaNumeric",
         handler: "setLayerNameAndData",
@@ -1038,6 +1219,15 @@ const data = {
           return faker.random.alphaNumeric();
         },
       },
+      {
+        name: "Random hexaDecimal Character",
+        identifier: "random.hexaDecimal",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.random.hexaDecimal();
+        },
+      }
     ],
   },
 
@@ -1072,6 +1262,15 @@ const data = {
         },
       },
       {
+        name: "File Type",
+        identifier: "system.fileType",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.system.fileType();
+        },
+      },
+      {
         name: "Common File Type",
         identifier: "system.commonFileType",
         handler: "setLayerNameAndData",
@@ -1099,12 +1298,21 @@ const data = {
         },
       },
       {
-        name: "File Type",
-        identifier: "system.fileType",
+        name: "Directory Path",
+        identifier: "system.directoryPath",
         handler: "setLayerNameAndData",
         script: "index.js",
         replace: function () {
-          return faker.system.fileType();
+          return faker.system.directoryPath();
+        },
+      },
+      {
+        name: "File Path",
+        identifier: "system.filePath",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.system.filePath();
         },
       },
       {
@@ -1118,6 +1326,84 @@ const data = {
       },
     ],
   },
+
+  vehicle: {
+    name: "Vehicle",
+    data: [
+      {
+        name: "Vehicle (Full Name)",
+        identifier: "vehicle.vehicle",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.vehicle.vehicle();
+        },
+      },
+      {
+        name: "Vehicle Manufacturer",
+        identifier: "vehicle.manufacturer",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.vehicle.manufacturer();
+        },
+      },
+      {
+        name: "Vehicle Model",
+        identifier: "vehicle.model",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.vehicle.model();
+        },
+      },
+      {
+        name: "Vehicle Type",
+        identifier: "vehicle.type",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.vehicle.type();
+        },
+      },
+      {
+        name: "Vehicle Fuel",
+        identifier: "vehicle.fuel",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.vehicle.fuel();
+        },
+      },
+      {
+        name: "Vehicle VIN",
+        identifier: "vehicle.vin",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.vehicle.vin();
+        },
+      },
+      {
+        name: "Vehicle Color",
+        identifier: "vehicle.color",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.vehicle.color();
+        },
+      },
+      {
+        name: "Vehicle Registration Number",
+        identifier: "vehicle.vrm",
+        handler: "setLayerNameAndData",
+        script: "index.js",
+        replace: function () {
+          return faker.vehicle.vrm();
+        },
+      },
+    ]
+  }
 };
 
 export default data;
