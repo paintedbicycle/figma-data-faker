@@ -1,0 +1,7 @@
+{
+  "name": "Figma Data Faker",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "id": "940407220339069169"
+}

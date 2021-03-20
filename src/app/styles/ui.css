@@ -1,0 +1,14 @@
+.border-bottom {
+  border-bottom: 1px solid #cecece;
+}
+.border-bottom:last-child {
+  border-bottom: none;
+}
+.button {
+  border-radius: 0;
+  width: 100%;
+  color: rgb(73, 72, 72);
+  background: white;
+  pointer-events: auto;
+  padding-left: 0;
+}
