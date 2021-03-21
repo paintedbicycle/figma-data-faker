@@ -10,7 +10,10 @@ import {groupBy} from 'lodash';
 // Fuse.js search options
 const options = {
     includeScore: true,
+    ignoreLocation: true,
     findAllMatches: true,
+    distance: 20,
+    threshold: 0.2,
     keys: ['name'],
 };
 
