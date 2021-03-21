@@ -15,7 +15,7 @@ figma.ui.onmessage = async (msg) => {
       await figma.loadFontAsync(node.fontName);
 
       // Grab the data for this specific pieces of data
-      const data = lookupData(msg.category, msg.identifier);
+      const data = lookupData(msg.identifier);
 
       // Run the function that comes from the look up
       const replacement = data.replace();
@@ -26,9 +26,9 @@ figma.ui.onmessage = async (msg) => {
   }
 };
 
-function lookupData(category, identifier) {
+function lookupData(identifier) {
   // Pull all information from the availableGaps object
-  return find(data[category].data, (object) => {
+  return find(data, (object) => {
     // Pick the gap object that corresponds to this form
     return object.identifier === identifier;
   });

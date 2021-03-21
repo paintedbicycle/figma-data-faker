@@ -1,11 +1,9 @@
 import faker from "faker";
 
-const data = {
-  address: {
-    name: "Postal addresses",
-    data: [
+const data = [
       {
         name: "US Zip Code",
+        category: "Postal addresses",
         identifier: "address.zipCode",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -15,6 +13,7 @@ const data = {
       },
       {
         name: "City Name",
+        category: "Postal addresses",
         identifier: "address.city",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -24,6 +23,7 @@ const data = {
       },
       {
         name: "City Prefix",
+        category: "Postal addresses",
         identifier: "address.cityPrefix",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -33,6 +33,7 @@ const data = {
       },
       {
         name: "City Suffix",
+        category: "Postal addresses",
         identifier: "address.citySuffix",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -42,6 +43,7 @@ const data = {
       },
       {
         name: "Street Name",
+        category: "Postal addresses",
         identifier: "address.streetName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -51,6 +53,7 @@ const data = {
       },
       {
         name: "Street Address",
+        category: "Postal addresses",
         identifier: "address.streetAddress",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -60,6 +63,7 @@ const data = {
       },
       {
         name: "Street Suffix",
+        category: "Postal addresses",
         identifier: "address.streetSuffix",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -69,6 +73,7 @@ const data = {
       },
       {
         name: "Street Prefix",
+        category: "Postal addresses",
         identifier: "address.streetPrefix",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -78,6 +83,7 @@ const data = {
       },
       {
         name: "Secondary Address Line",
+        category: "Postal addresses",
         identifier: "address.secondaryAddress",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -87,6 +93,7 @@ const data = {
       },
       {
         name: "County",
+        category: "Postal addresses",
         identifier: "address.county",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -96,6 +103,7 @@ const data = {
       },
       {
         name: "Country",
+        category: "Postal addresses",
         identifier: "address.country",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -105,6 +113,7 @@ const data = {
       },
       {
         name: "Country Code",
+        category: "Postal addresses",
         identifier: "address.countryCode",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -114,6 +123,7 @@ const data = {
       },
       {
         name: "State",
+        category: "Postal addresses",
         identifier: "address.state",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -123,6 +133,7 @@ const data = {
       },
       {
         name: "State Abbreviation",
+        category: "Postal addresses",
         identifier: "address.stateAbbr",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -132,6 +143,7 @@ const data = {
       },
       {
         name: "Latitude",
+        category: "Postal addresses",
         identifier: "address.latitude",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -141,6 +153,7 @@ const data = {
       },
       {
         name: "Longitude",
+        category: "Postal addresses",
         identifier: "address.longitude",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -150,6 +163,7 @@ const data = {
       },
       {
         name: "Direction",
+        category: "Postal addresses",
         identifier: "address.direction",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -159,6 +173,7 @@ const data = {
       },
       {
         name: "Cardinal direction",
+        category: "Postal addresses",
         identifier: "address.cardinalDirection",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -168,6 +183,7 @@ const data = {
       },
       {
         name: "Ordinal direction",
+        category: "Postal addresses",
         identifier: "address.ordinalDirection",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -177,15 +193,17 @@ const data = {
       },
       // {
       //   name: "GPS coordinate",
+      //   category: "Postal addresses",
       //   identifier: "nearbyGPSCoordinate",
-      // handler: "setLayerNameAndData",
-      // script: "index.js",
+      //   handler: "setLayerNameAndData",
+      //   script: "index.js",
       //   replace: function () {
       //     return faker.address.nearbyGPSCoordinate();
       //   },
       // },
       {
         name: "Time zone",
+        category: "Postal addresses",
         identifier: "address.timeZone",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -193,14 +211,10 @@ const data = {
           return faker.address.timeZone();
         },
       },
-    ],
-  },
 
-  commerce: {
-    name: "Commerce",
-    data: [
       {
         name: "(Brand) Color",
+        category: "Commerce",
         identifier: "commerce.color",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -210,6 +224,7 @@ const data = {
       },
       {
         name: "Business Department",
+        category: "Commerce",
         identifier: "commerce.department",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -219,6 +234,7 @@ const data = {
       },
       {
         name: "Product Name",
+        category: "Commerce",
         identifier: "commerce.productName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -228,6 +244,7 @@ const data = {
       },
       {
         name: "Price",
+        category: "Commerce",
         identifier: "commerce.price",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -237,6 +254,7 @@ const data = {
       },
       {
         name: "Product Adjective",
+        category: "Commerce",
         identifier: "commerce.productAdjective",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -246,6 +264,7 @@ const data = {
       },
       {
         name: "Product Material",
+        category: "Commerce",
         identifier: "commerce.productMaterial",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -255,6 +274,7 @@ const data = {
       },
       {
         name: "Product",
+        category: "Commerce",
         identifier: "commerce.product",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -264,6 +284,7 @@ const data = {
       },
       {
         name: "Product Description",
+        category: "Commerce",
         identifier: "commerce.productDescription",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -271,13 +292,10 @@ const data = {
           return faker.commerce.productDescription();
         },
       },
-    ],
-  },
-  company: {
-    name: "Company",
-    data: [
+
       // {
       //   name: "Company Suffixes",
+      //   category: "Company",
       //   identifier: "company.suffixes",
       //   handler: "setLayerNameAndData",
       //   script: "index.js",
@@ -287,6 +305,7 @@ const data = {
       // },
       {
         name: "Company Name",
+        category: "Company",
         identifier: "company.companyName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -296,6 +315,7 @@ const data = {
       },
       {
         name: "Company Suffix",
+        category: "Company",
         identifier: "company.companySuffix",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -305,6 +325,7 @@ const data = {
       },
       {
         name: "Company Catchphrase",
+        category: "Company",
         identifier: "company.catchPhrase",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -314,6 +335,7 @@ const data = {
       },
       {
         name: "Company BS Phrase",
+        category: "Company",
         identifier: "company.bs",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -323,6 +345,7 @@ const data = {
       },
       {
         name: "Catchphrase Adjective",
+        category: "Company",
         identifier: "company.catchPhraseAdjective",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -332,6 +355,7 @@ const data = {
       },
       {
         name: "Catchphrase Descriptor",
+        category: "Company",
         identifier: "company.catchPhraseDescriptor",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -341,6 +365,7 @@ const data = {
       },
       {
         name: "Catchphrase Noun",
+        category: "Company",
         identifier: "company.catchPhraseNoun",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -350,6 +375,7 @@ const data = {
       },
       {
         name: "BS Adjective",
+        category: "Company",
         identifier: "company.bsAdjective",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -359,6 +385,7 @@ const data = {
       },
       {
         name: "BS Buzzword Verb",
+        category: "Company",
         identifier: "company.bsBuzz",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -368,6 +395,7 @@ const data = {
       },
       {
         name: "BS Buzzword Noun",
+        category: "Company",
         identifier: "company.bsNoun",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -375,13 +403,10 @@ const data = {
           return faker.company.bsNoun();
         },
       },
-    ],
-  },
-  database: {
-    name: "Database",
-    data: [
+
       {
         name: "Database Column Name",
+        category: "Database",
         identifier: "database.column",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -391,6 +416,7 @@ const data = {
       },
       {
         name: "Database Column Type",
+        category: "Database",
         identifier: "database.type",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -400,6 +426,7 @@ const data = {
       },
       {
         name: "Database Collation",
+        category: "Database",
         identifier: "database.collation",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -409,6 +436,7 @@ const data = {
       },
       {
         name: "Database Engine",
+        category: "Database",
         identifier: "database.engine",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -416,13 +444,10 @@ const data = {
           return faker.database.engine();
         },
       },
-    ],
-  },
-  date: {
-    name: "Dates",
-    data: [
+
       {
         name: "Soon Date (Full)",
+        category: "Dates",
         identifier: "date.soon",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -432,6 +457,7 @@ const data = {
       },
       {
         name: "Past Date (Full)",
+        category: "Dates",
         identifier: "date.past",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -441,6 +467,7 @@ const data = {
       },
       {
         name: "Future Date (Full)",
+        category: "Dates",
         identifier: "date.future",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -450,6 +477,7 @@ const data = {
       },
       {
         name: "Recent Date (Full)",
+        category: "Dates",
         identifier: "date.recent",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -459,6 +487,7 @@ const data = {
       },
       {
         name: "Month",
+        category: "Dates",
         identifier: "date.month",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -468,6 +497,7 @@ const data = {
       },
       {
         name: "Weekday",
+        category: "Dates",
         identifier: "date.weekday",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -475,13 +505,10 @@ const data = {
           return faker.date.weekday();
         },
       },
-    ],
-  },
-  finance: {
-    name: "Finance",
-    data: [
+
       {
         name: "Account Number",
+        category: "Finance",
         identifier: "finance.account",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -491,6 +518,7 @@ const data = {
       },
       {
         name: "Account Name/Type",
+        category: "Finance",
         identifier: "finance.accountName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -500,6 +528,7 @@ const data = {
       },
       {
         name: "Credit Card Number",
+        category: "Finance",
         identifier: "finance.mask",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -509,6 +538,7 @@ const data = {
       },
       {
         name: "Credit Card CVV",
+        category: "Finance",
         identifier: "finance.creditCardCVV",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -518,6 +548,7 @@ const data = {
       },
       // {
       //   name: "Credit Card Last 4",
+      //   category: "Finance",
       //   identifier: "finance.mask",
       //   handler: "setLayerNameAndData",
       //   script: "index.js",
@@ -527,6 +558,7 @@ const data = {
       // },
       {
         name: "Purchase Amount / Price",
+        category: "Finance",
         identifier: "finance.amount",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -536,6 +568,7 @@ const data = {
       },
       {
         name: "Transaction Type",
+        category: "Finance",
         identifier: "finance.transactionType",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -545,6 +578,7 @@ const data = {
       },
       {
         name: "Currency Code",
+        category: "Finance",
         identifier: "finance.currencyCode",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -554,6 +588,7 @@ const data = {
       },
       {
         name: "Currency Name",
+        category: "Finance",
         identifier: "finance.currencyName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -563,6 +598,7 @@ const data = {
       },
       {
         name: "Currency Symbol",
+        category: "Finance",
         identifier: "finance.currencySymbol",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -572,6 +608,7 @@ const data = {
       },
       {
         name: "Bitcoin Address",
+        category: "Finance",
         identifier: "finance.bitcoinAddress",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -581,6 +618,7 @@ const data = {
       },
       {
         name: "Litecoin Address",
+        category: "Finance",
         identifier: "finance.litecoinAddress",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -590,6 +628,7 @@ const data = {
       },
       {
         name: "Ethereum Address",
+        category: "Finance",
         identifier: "finance.ethereumAddress",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -599,6 +638,7 @@ const data = {
       },
       {
         name: "IBAN Number",
+        category: "Finance",
         identifier: "finance.iban",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -608,6 +648,7 @@ const data = {
       },
       {
         name: "BIC Code",
+        category: "Finance",
         identifier: "finance.bic",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -615,14 +656,10 @@ const data = {
           return faker.finance.bic();
         },
       },
-    ],
-  },
 
-  git: {
-    name: "Git",
-    data: [
       {
         name: "Git Branch Name",
+        category: "Git",
         identifier: "git.branch",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -632,6 +669,7 @@ const data = {
       },
       {
         name: "Git Commit Entry",
+        category: "Git",
         identifier: "git.commitEntry",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -641,6 +679,7 @@ const data = {
       },
       {
         name: "Git Commit Message",
+        category: "Git",
         identifier: "git.commitMessage",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -650,6 +689,7 @@ const data = {
       },
       {
         name: "Git Commit SHA",
+        category: "Git",
         identifier: "git.commitSha",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -659,6 +699,7 @@ const data = {
       },
       {
         name: "Git Short SHA",
+        category: "Git",
         identifier: "git.shortSha",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -666,14 +707,10 @@ const data = {
           return faker.git.shortSha();
         },
       },
-    ]
-  },
 
-  hacker: {
-    name: "Technical",
-    data: [
       {
         name: "Technical Abbreviation",
+        category: "Technical",
         identifier: "hacker.abbreviation",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -683,6 +720,7 @@ const data = {
       },
       {
         name: "Technical Adjective",
+        category: "Technical",
         identifier: "hacker.adjective",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -692,6 +730,7 @@ const data = {
       },
       {
         name: "Technical Noun",
+        category: "Technical",
         identifier: "hacker.noun",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -701,6 +740,7 @@ const data = {
       },
       {
         name: "Technical Verb",
+        category: "Technical",
         identifier: "hacker.verb",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -710,6 +750,7 @@ const data = {
       },
       {
         name: "Technical '-Ing' Verb",
+        category: "Technical",
         identifier: "hacker.ingverb",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -719,6 +760,7 @@ const data = {
       },
       {
         name: "'Hacker' Phrase",
+        category: "Technical",
         identifier: "hacker.phrase",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -726,14 +768,10 @@ const data = {
           return faker.hacker.phrase();
         },
       },
-    ],
-  },
 
-  internet: {
-    name: "Internet",
-    data: [
       {
         name: "Email Address",
+        category: "Internet",
         identifier: "internet.email",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -743,6 +781,7 @@ const data = {
       },
       {
         name: "Example.org Email Address",
+        category: "Internet",
         identifier: "internet.exampleEmail",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -752,6 +791,7 @@ const data = {
       },
       {
         name: "Username",
+        category: "Internet",
         identifier: "internet.userName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -761,6 +801,7 @@ const data = {
       },
       {
         name: "Internet Protocol",
+        category: "Internet",
         identifier: "internet.protocol",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -770,6 +811,7 @@ const data = {
       },
       {
         name: "URL",
+        category: "Internet",
         identifier: "internet.url",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -779,6 +821,7 @@ const data = {
       },
       {
         name: "Domain Name",
+        category: "Internet",
         identifier: "internet.domainName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -788,6 +831,7 @@ const data = {
       },
       {
         name: "Domain Suffix",
+        category: "Internet",
         identifier: "internet.domainSuffix",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -797,6 +841,7 @@ const data = {
       },
       {
         name: "Domain Word",
+        category: "Internet",
         identifier: "internet.domainWord",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -806,6 +851,7 @@ const data = {
       },
       {
         name: "IP Address",
+        category: "Internet",
         identifier: "internet.ip",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -815,6 +861,7 @@ const data = {
       },
       {
         name: "IPv6 Address",
+        category: "Internet",
         identifier: "internet.ipv6",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -824,6 +871,7 @@ const data = {
       },
       {
         name: "Port number",
+        category: "Internet",
         identifier: "internet.port",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -833,6 +881,7 @@ const data = {
       },
       {
         name: "User Agent String",
+        category: "Internet",
         identifier: "internet.userAgent",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -842,6 +891,7 @@ const data = {
       },
       {
         name: "HEX Colo(u)r Code",
+        category: "Internet",
         identifier: "internet.color",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -851,6 +901,7 @@ const data = {
       },
       {
         name: "MAC Address",
+        category: "Internet",
         identifier: "internet.mac",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -860,6 +911,7 @@ const data = {
       },
       {
         name: "Sample Password",
+        category: "Internet",
         identifier: "internet.password",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -867,14 +919,10 @@ const data = {
           return faker.internet.password();
         },
       },
-    ],
-  },
 
-  lorem: {
-    name: "Lorem",
-    data: [
       {
         name: "Lorem Word",
+        category: "Lorem",
         identifier: "lorem.word",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -884,6 +932,7 @@ const data = {
       },
       {
         name: "Lorem Words",
+        category: "Lorem",
         identifier: "lorem.words",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -893,6 +942,7 @@ const data = {
       },
       {
         name: "Lorem Sentence",
+        category: "Lorem",
         identifier: "lorem.sentence",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -902,6 +952,7 @@ const data = {
       },
       {
         name: "Lorem Slug",
+        category: "Lorem",
         identifier: "lorem.slug",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -911,6 +962,7 @@ const data = {
       },
       {
         name: "Lorem Sentences",
+        category: "Lorem",
         identifier: "lorem.sentences",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -920,6 +972,7 @@ const data = {
       },
       {
         name: "Lorem Paragraph",
+        category: "Lorem",
         identifier: "lorem.paragraph",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -929,6 +982,7 @@ const data = {
       },
       {
         name: "Lorem Paragraphs",
+        category: "Lorem",
         identifier: "lorem.paragraphs",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -938,6 +992,7 @@ const data = {
       },
       {
         name: "Lorem Text",
+        category: "Lorem",
         identifier: "lorem.text",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -947,6 +1002,7 @@ const data = {
       },
       {
         name: "Lorem Lines",
+        category: "Lorem",
         identifier: "lorem.lines",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -954,13 +1010,10 @@ const data = {
           return faker.lorem.lines();
         },
       },
-    ],
-  },
-  music: {
-    name: "Music",
-    data: [
+
       {
         name: "Genre",
+        category: "Music",
         identifier: "music.genre",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -968,13 +1021,10 @@ const data = {
           return faker.music.genre();
         },
       },
-    ]
-  },
-  name: {
-    name: "Person",
-    data: [
+
       {
         name: "First Name",
+        category: "Person",
         identifier: "name.firstName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -984,6 +1034,7 @@ const data = {
       },
       {
         name: "Last Name",
+        category: "Person",
         identifier: "name.lastName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -993,6 +1044,7 @@ const data = {
       },
       {
         name: "Middle Name",
+        category: "Person",
         identifier: "name.middleName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1002,6 +1054,7 @@ const data = {
       },
       {
         name: "Full Name (First Last)",
+        category: "Person",
         identifier: "name.findName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1011,6 +1064,7 @@ const data = {
       },
       {
         name: "Job Title",
+        category: "Person",
         identifier: "name.jobTitle",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1020,6 +1074,7 @@ const data = {
       },
       {
         name: "Name Prefix",
+        category: "Person",
         identifier: "name.prefix",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1029,6 +1084,7 @@ const data = {
       },
       {
         name: "Name Suffix",
+        category: "Person",
         identifier: "name.suffix",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1038,6 +1094,7 @@ const data = {
       },
       {
         name: "Title",
+        category: "Person",
         identifier: "name.title",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1047,6 +1104,7 @@ const data = {
       },
       {
         name: "Job Descriptor Word",
+        category: "Person",
         identifier: "name.jobDescriptor",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1056,6 +1114,7 @@ const data = {
       },
       {
         name: "Job Area",
+        category: "Person",
         identifier: "name.jobArea",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1065,6 +1124,7 @@ const data = {
       },
       {
         name: "Job Type",
+        category: "Person",
         identifier: "name.jobType",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1072,14 +1132,10 @@ const data = {
           return faker.name.jobType();
         },
       },
-    ],
-  },
 
-  phone: {
-    name: "Phone",
-    data: [
       {
         name: "Phone Number",
+        category: "Phone",
         identifier: "phone.phoneNumber",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1089,6 +1145,7 @@ const data = {
       },
       {
         name: "North American Phone Number",
+        category: "Phone",
         identifier: "phone.phoneNumberFormat",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1098,6 +1155,7 @@ const data = {
       },
       {
         name: "Phone Format Placeholder",
+        category: "Phone",
         identifier: "phone.phoneFormats",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1105,14 +1163,10 @@ const data = {
           return faker.phone.phoneFormats();
         },
       },
-    ],
-  },
 
-  random: {
-    name: "Random",
-    data: [
       {
         name: "Random Number",
+        category: "Random",
         identifier: "random.number",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1122,6 +1176,7 @@ const data = {
       },
       {
         name: "Float",
+        category: "Random",
         identifier: "random.number",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1131,6 +1186,7 @@ const data = {
       },
       {
         name: "Array Element",
+        category: "Random",
         identifier: "random.arrayElement",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1140,6 +1196,7 @@ const data = {
       },
       {
         name: "arrayElements",
+        category: "Random",
         identifier: "random.arrayElements",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1149,6 +1206,7 @@ const data = {
       },
       {
         name: "objectElement",
+        category: "Random",
         identifier: "random.objectElement",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1158,6 +1216,7 @@ const data = {
       },
       {
         name: "UUID",
+        category: "Random",
         identifier: "random.uuid",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1167,6 +1226,7 @@ const data = {
       },
       {
         name: "Boolean",
+        category: "Random",
         identifier: "random.boolean",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1176,6 +1236,7 @@ const data = {
       },
       {
         name: "Random Word",
+        category: "Random",
         identifier: "random.word",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1185,6 +1246,7 @@ const data = {
       },
       {
         name: "Random Words",
+        category: "Random",
         identifier: "random.words",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1194,6 +1256,7 @@ const data = {
       },
       {
         name: "Language Locale",
+        category: "Random",
         identifier: "random.locale",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1203,6 +1266,7 @@ const data = {
       },
       {
         name: "Random Aalpha Character",
+        category: "Random",
         identifier: "random.alpha",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1212,6 +1276,7 @@ const data = {
       },
       {
         name: "Random AlphaNum Character",
+        category: "Random",
         identifier: "random.alphaNumeric",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1221,21 +1286,18 @@ const data = {
       },
       {
         name: "Random hexaDecimal Character",
+        category: "Random",
         identifier: "random.hexaDecimal",
         handler: "setLayerNameAndData",
         script: "index.js",
         replace: function () {
           return faker.random.hexaDecimal();
         },
-      }
-    ],
-  },
+      },
 
-  system: {
-    name: "Computer system",
-    data: [
       {
         name: "Random Filename",
+        category: "Computer system",
         identifier: "system.fileName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1245,6 +1307,7 @@ const data = {
       },
       {
         name: "Common Filename",
+        category: "Computer system",
         identifier: "system.commonFileName",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1254,6 +1317,7 @@ const data = {
       },
       {
         name: "MIME Type",
+        category: "Computer system",
         identifier: "system.mimeType",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1263,6 +1327,7 @@ const data = {
       },
       {
         name: "File Type",
+        category: "Computer system",
         identifier: "system.fileType",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1272,6 +1337,7 @@ const data = {
       },
       {
         name: "Common File Type",
+        category: "Computer system",
         identifier: "system.commonFileType",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1281,6 +1347,7 @@ const data = {
       },
       {
         name: "File Extension",
+        category: "Computer system",
         identifier: "system.fileExt",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1290,6 +1357,7 @@ const data = {
       },
       {
         name: "Common File Extension",
+        category: "Computer system",
         identifier: "system.commonFileExt",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1299,6 +1367,7 @@ const data = {
       },
       {
         name: "Directory Path",
+        category: "Computer system",
         identifier: "system.directoryPath",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1308,6 +1377,7 @@ const data = {
       },
       {
         name: "File Path",
+        category: "Computer system",
         identifier: "system.filePath",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1317,6 +1387,7 @@ const data = {
       },
       {
         name: "Semver",
+        category: "Computer system",
         identifier: "system.semver",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1324,14 +1395,10 @@ const data = {
           return faker.system.semver();
         },
       },
-    ],
-  },
 
-  vehicle: {
-    name: "Vehicle",
-    data: [
       {
         name: "Vehicle (Full Name)",
+        category: "Vehicle",
         identifier: "vehicle.vehicle",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1341,6 +1408,7 @@ const data = {
       },
       {
         name: "Vehicle Manufacturer",
+        category: "Vehicle",
         identifier: "vehicle.manufacturer",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1350,6 +1418,7 @@ const data = {
       },
       {
         name: "Vehicle Model",
+        category: "Vehicle",
         identifier: "vehicle.model",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1359,6 +1428,7 @@ const data = {
       },
       {
         name: "Vehicle Type",
+        category: "Vehicle",
         identifier: "vehicle.type",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1368,6 +1438,7 @@ const data = {
       },
       {
         name: "Vehicle Fuel",
+        category: "Vehicle",
         identifier: "vehicle.fuel",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1377,6 +1448,7 @@ const data = {
       },
       {
         name: "Vehicle VIN",
+        category: "Vehicle",
         identifier: "vehicle.vin",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1386,6 +1458,7 @@ const data = {
       },
       {
         name: "Vehicle Color",
+        category: "Vehicle",
         identifier: "vehicle.color",
         handler: "setLayerNameAndData",
         script: "index.js",
@@ -1395,15 +1468,15 @@ const data = {
       },
       {
         name: "Vehicle Registration Number",
+        category: "Vehicle",
         identifier: "vehicle.vrm",
         handler: "setLayerNameAndData",
         script: "index.js",
         replace: function () {
           return faker.vehicle.vrm();
         },
-      },
-    ]
-  }
-};
+      }
+];
 
 export default data;
+ 
