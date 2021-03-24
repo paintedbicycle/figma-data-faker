@@ -5,6 +5,9 @@ figma.showUI(__html__);
 
 figma.ui.onmessage = async (msg) => {
     if (msg.type === 'replace-text') {
+        if (!figma.currentPage.selection || !figma.currentPage.selection.length) {
+            return figma.notify('Please select at least one text layer');
+        }
         // Loop through all selected nodes
         for (const node of figma.currentPage.selection) {
             // Get out of here if it's not text
@@ -20,7 +23,7 @@ figma.ui.onmessage = async (msg) => {
                     await figma.loadFontAsync(node.getRangeFontName(i, i + 1));
                 }
 
-            // Case 2: If only one style
+                // Case 2: If only one style
             } else {
                 //@ts-ignore
                 await figma.loadFontAsync(node.fontName);
