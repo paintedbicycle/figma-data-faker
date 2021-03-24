@@ -1,6 +1,6 @@
 {
 	"name": "figma-data-faker",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "A Figma plugin providing 130+ types of smart placeholder content for your mockups from Faker.js and other sources.",
 	"author": "Paul Wright",
 	"license": "MIT",
